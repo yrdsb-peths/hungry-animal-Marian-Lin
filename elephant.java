@@ -17,11 +17,18 @@ public class elephant extends Actor
         // Add your action code here.
         if(Greenfoot.isKeyDown("d"))
         {
-            move(2);
+            move(3);
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-2);
+            move(-3);
         }   
+        
+        if(isTouching(banana.class))
+        {
+            removeTouching(banana.class);
+            MyWorld world = (MyWorld)getWorld();
+            world.spawnbanana();
+        }
     }
 }
