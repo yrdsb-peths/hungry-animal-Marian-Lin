@@ -17,21 +17,29 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1, false); 
         
-        elephant e = new elephant();
+        Elephant e = new Elephant();
         addObject(e,300,350);
         
         scoreLabel = new Label(0,80);
         addObject(scoreLabel,50,50);
         
-        spawnbanana();
+        spawnBanana();
         
     }
     
-    public void spawnbanana()
+    /**
+     * End the game and draw 'GameOver'
+     */
+    public void gameOver()
     {
-        banana a = new banana();
+        Label gameOverLabel = new Label("GameOver",100);
+        addObject(gameOverLabel,300,200);
+    }
+    public void spawnBanana()
+    {
+        Banana a = new Banana();
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(a,x,y);

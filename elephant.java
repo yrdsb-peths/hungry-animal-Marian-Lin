@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class elephant extends Actor
+public class Elephant extends Actor
 {
     /**
      * Act - do whatever the elephant wants to do. This method is called whenever
@@ -24,12 +24,12 @@ public class elephant extends Actor
             move(-3);
         }   
         
-        if(isTouching(banana.class))
+        if(isTouching(Banana.class))
         {
-            removeTouching(banana.class);
+            removeTouching(Banana.class);
             MyWorld world = (MyWorld)getWorld();
             world.increaseScore();
-            world.spawnbanana();
+            world.spawnBanana();
         }
     }
 }

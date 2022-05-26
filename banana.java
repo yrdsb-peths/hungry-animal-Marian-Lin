@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class banana extends Actor
+public class Banana extends Actor
 {
     /**
      * Act - do whatever the banana wants to do. This method is called whenever
@@ -16,7 +16,15 @@ public class banana extends Actor
     {
         // Add your action code here.
         int x = getX();
-        int y = getY();
-        setLocation(x,y+2);
+        int y = getY() + 2;
+        setLocation(x,y);
+        
+        //Remove banana and draw game over when banana gets to bottem
+        MyWorld world = (MyWorld) getWorld();
+        if(getY()>=world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }
