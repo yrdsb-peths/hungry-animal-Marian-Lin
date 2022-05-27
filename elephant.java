@@ -13,16 +13,29 @@ public class Elephant extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootSound elephantSound = new GreenfootSound("elephant5.mp3");
-    GreenfootImage idle = new GreenfootImage("images/idle0.png");
+    GreenfootImage [] idle = new GreenfootImage[8];
     
     /**
      * Constructor - The code that gets run one time when object is created
      */
     public Elephant()
     {
-        setImage(idle);
+        for (int i = 0;i<idle.length;i++)
+        {
+            idle[i] = new GreenfootImage("images/idle" + i +".png");
+        }
+        setImage(idle[0]);
     }
     
+    /*
+     * Animate the elephant
+     */
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
     public void act()
     {
         // Add your action code here.
@@ -34,7 +47,11 @@ public class Elephant extends Actor
         {
             move(-3);
         }   
+        //Remove banana if elephant eats it
         
+        //Animate the elephant
+        animateElephant();
+    
         if(isTouching(Banana.class))
         {
             removeTouching(Banana.class);
