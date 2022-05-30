@@ -18,7 +18,7 @@ public class Elephant extends Actor
     
     //Direction the elephant is facing
     String facing = "a";
-    SimpleTimer animtionTimer = new SimepaleTimer
+    SimpleTimer animationTimer = new SimpleTimer();
     /**
      * Constructor - The code that gets run one time when object is created
      */

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class banana here.
+ * Write a description of class Banana here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -9,18 +9,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Banana extends Actor
 {
     /**
-     * Act - do whatever the banana wants to do. This method is called whenever
+     * Act - do whatever the Banana wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
         // Add your action code here.
         int x = getX();
-        int y = getY() + 2;
+        int y = getY()+2;
         setLocation(x,y);
         
-        //Remove banana and draw game over when banana gets to bottem
-        MyWorld world = (MyWorld) getWorld();
+        //Remove Banana and draw game ove when Banana gets to bottem
+        MyWorld world = (MyWorld)getWorld();
         if(getY()>=world.getHeight())
         {
             world.gameOver();
