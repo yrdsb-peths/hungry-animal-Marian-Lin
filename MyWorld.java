@@ -52,7 +52,7 @@ public class MyWorld extends World
     public void spawnBanana()
     {
         Banana a = new Banana();
-        Banana.setSpeed(level);
+        a.setSpeed(level);
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = 0;
         addObject(a,x,y);
