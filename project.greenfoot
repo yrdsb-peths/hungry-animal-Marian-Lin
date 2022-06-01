@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.Banana.image=banana1.png
 class.Elephant.image=elephant.png
-class.MyWorld.image=ground3.jpg
+class.MyWorld.image=ground4.jpg
 class.TitleScreen.image=forest.jpg
 dependency1.from=MyWorld
 dependency1.to=Label
